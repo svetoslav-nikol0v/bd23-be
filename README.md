@@ -27,10 +27,10 @@
 This project is built with the Nest.js framework, which is used as an additional layer above Star Wars API (SWAPI—https://swapi.dev/).
 The idea of the project is to create a more user-friendly API that interacts with SWAPI and serves data in a more manageable format. The new API layer allows to:
 
-- filter data by given fields (`name=John`)
-- sort data by given parameter (`sort=name`)
+- filter data by given field (`name=John`)
+- sort data by given field (`sort=name`)
 - order data (`order=asc` or `order=desc`, by default order is ASC)
-- paginate the large lists and control the number of items on the page (`page=1` and `limit=5`)
+- paginate the large lists and control the number of items on the page (`page=1` and `limit=5` by default)
 
 To improve the performance of the layer, a caching mechanism has been implemented. Once any of the endpoints is called, the result is cached, so that the next time the endpoint is called again, it will return the cached value.
 A throttled mechanism has been implemented as well to limit the number of requests per certain time.
